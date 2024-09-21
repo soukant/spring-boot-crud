@@ -6,4 +6,6 @@ import com.example.spring_boot_crud.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product,Integer>{
 
+    Product findByName(String name);
+
 }

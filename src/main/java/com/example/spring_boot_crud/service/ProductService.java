@@ -20,16 +20,20 @@ public class ProductService {
     return repository.save(product);
     }
 
-    public List<Product> saveProduct(List<Product> products) 
+    public List<Product> saveProducts(List<Product> products) 
     {
 
     return repository.saveAll(products);
     }
 
-    public List<Product> getProduct() 
+    public List<Product> getProducts() 
     {
 
     return repository.findAll();
+    }
+
+    public Product getProductById(int id) {
+        return repository.findById(id).orElse(null);
     }
 
     public Product getProductByName(String name) 
@@ -53,5 +57,7 @@ public class ProductService {
     return repository.save(existingProduct);
 
     }
+
+    
 }
 
